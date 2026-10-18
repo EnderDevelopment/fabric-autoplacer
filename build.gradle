@@ -1,0 +1,31 @@
+plugins {
+    id 'fabric-loom' version '1.3-SNAPSHOT'
+}
+
+repositories {
+    mavenCentral()
+    maven {
+        name = 'Fabric'
+        url = 'https://maven.fabricmc.net/'
+    }
+}
+
+extra {
+    apply plugin: 'fabric-loom'
+    minecraft {
+        version = project.property('minecraft_version')
+        mappings = 'official'
+    }
+    loaderVersion = project.property('loader_version')
+    modId = 'autoplacer'
+    version = project.property('mod_version')
+    author = 'EnderDevelopment'
+    license = 'MIT'
+}
+
+dependencies {
+    minecraft 'com.mojang:minecraft:1.20.4'
+    mappings 'net.fabricmc:yarn:1.20.4+build.1:v2'
+    modImplementation 'net.fabricmc:fabric-loader:0.14.25'
+    modImplementation 'net.fabricmc.fabric-api:fabric-api:0.82.0+1.20.4'
+}

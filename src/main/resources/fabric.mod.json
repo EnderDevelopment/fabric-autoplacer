@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "autoplacer",
+  "version": "${version}",
+  "name": "AutoPlacer",
+  "description": "A Fabric client utility module for automatic block placement.",
+  "authors": ["EnderDevelopment"],
+  "contact": {
+    "homepage": "https://enderdevelopment.com",
+    "sources": "https://github.com/enderdevelopment/autoplacer"
+  },
+  "license": "MIT",
+  "icon": "assets/autoplacer/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "client": [
+      "com.enderdevelopment.autoplacer.client.AutoPlacerClient"
+    ]
+  },
+  "mixins": [
+    "autoplacer.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.14.0",
+    "minecraft": "1.20.1",
+    "fabric-api": "*"
+  }
+}
